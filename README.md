@@ -64,12 +64,22 @@ $ npm install bower-files --save-dev
 $ npm install browser-sync --save-dev
 ```
 
+## SASS
+```
+$ npm install browser-sync --save-dev
+```
 
 ## CLONING A PROJECT
 
 ```
-$ npm install <!-- saved into node_modules/ -->
+$ npm install
 ```
 ```
-$ bower install <!-- saved into bower_components/ -->
+$ bower install
+```
+```
+$ gulp build
+```
+```
+$ gulp serve
 ```
