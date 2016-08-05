@@ -48,12 +48,6 @@ _apiKey: 94a3eaabf868c9dfb9ce74ae332306d883fc450a_
 _PROJECT INCOMPLETE_
 _Objectives that still need to be met:_
 * _Website works as expected_
-* _Storing API key in variable exports.apiKey_
-* _App includes 2 JS files_
-* _exports used correctly in one JS file_
-* _Dependencies managed with npm and Bower_
-* _The app include a gulp-based asset pipeline with a development server_
-* _The asset pipeline include all tasks from the homework this week_
 
 
 ## Support and contact details
