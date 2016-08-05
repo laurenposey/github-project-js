@@ -1,75 +1,33 @@
-## ATOM CUSTOMIZATION
-* Theme: Seti-UI
-* Packages: linter-jshint
+# _EPICODUS INDEPENDENT PROJECT | Github User Lookup_
 
+#### _Shoe Distribution, 5 August 2016_
 
-## ENVIRONMENT SETUP
-```
-$ brew install node <!-- only needs to be done once -->
-```
-```
-$ npm init <!-- use defaults, make name match project -->
-```
-```
-$ npm install gulp -g <!-- only needs to be done once -->
-```
-```
-$ npm install gulp --save-dev
-```
-```
-$ npm install browserify --save-dev
-```
-```
-$ npm install vinyl-source-stream --save-dev
-```
-```
-$ npm install gulp-concat --save-dev
-```
-```
-$ npm install gulp-uglify --save-dev
-```
-```
-$ npm install gulp-util --save-dev
-```
-```
-$ npm install del --save-dev
-```
-```
-$ npm install jshint --save-dev
-```
-```
-$ npm install gulp-jshint --save-dev
-```
-```
-$ npm install bower -g <!-- only needs to be done once -->
-```
-```
-$ bower init <!-- use defaults, make name match project -->
-```
-```
-$ bower install jquery --save
-```
-```
-$ bower install bootstrap --save
-```
-```
-$ bower install moment --save
-```
-```
-$ npm install bower-files --save-dev
-```
+#### By _**Lauren Posey**_
 
-## DEVELOPEMENT SERVER SETUP LOCALLY
+## Description
+
+_A website where the user can enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories._
+
+## Specifications
+#### User Story:
+* _As a user, I want to be able to enter a users name and see a list of their repositories._
+
+## Setup/Installation Requirements
+
+_Clone or download this repository_
+_apiKey:_
+
+#### DEVELOPEMENT SERVER SETUP LOCALLY
 ```
 $ npm install browser-sync --save-dev
 ```
 
-## SASS
+#### SASS
 ```
 $ npm install browser-sync --save-dev
 ```
 
-## CLONING A PROJECT
+#### CLONING PROJECT
 
 ```
 $ npm install
@@ -83,3 +41,36 @@ $ gulp build
 ```
 $ gulp serve
 ```
+
+## Known Bugs
+_PROJECT INCOMPLETE_
+_Objectives that still need to be met:_
+* _Website works as expected_
+* _Storing API key in variable exports.apiKey_
+* _App includes 2 JS files_
+* _exports used correctly in one JS file_
+* _Dependencies managed with npm and Bower_
+* _The app include a gulp-based asset pipeline with a development server_
+* _The asset pipeline include all tasks from the homework this week_
+
+
+## Support and contact details
+
+_If you run into any issues or have questions, ideas, or concerns, please feel free to contact Lauren at <a href="mailto:mrslaurenposey@gmail.com">mrslaurenposey@gmail.com</a>._
+
+## Technologies Used
+
+* _Github API_
+* _JavaScript_
+
+### License
+
+*MIT License*
+
+Copyright (c) 2016 **_Lauren Posey_**
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
