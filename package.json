@@ -1,5 +1,5 @@
 {
-  "name": "node_template",
+  "name": "github-js",
   "version": "1.0.0",
   "description": "* Theme: Seti-UI * Packages: linter-jshint",
   "main": "index.js",
@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maldonmeehan/node_template.git"
+    "url": "git+https://github.com/laurenposey/github-project-js.git"
   },
   "bugs": {
-    "url": "https://github.com/maldonmeehan/node_template/issues"
+    "url": "https://github.com/laurenposey/github-project-js/issues"
   },
-  "homepage": "https://github.com/maldonmeehan/node_template#readme"
+  "homepage": "https://github.com/laurenposey/github-project-js#readme"
 }
