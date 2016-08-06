@@ -24,23 +24,23 @@ var lib = require('bower-files')({ // must use with Bootstrap
 var browserSync = require('browser-sync').create();
 
 gulp.task('concatInterface', function() {
-  return gulp.src(['./js/*-interface.js'])
+  return gulp.src(['js/*-interface.js'])
     .pipe(concat('allConcat.js'))
-    .pipe(gulp.dest('./tmp'));
+    .pipe(gulp.dest('tmp'));
 });
 
 //to run: $ gulp jsBrowserify
 gulp.task('jsBrowserify', ['concatInterface'], function() {
-  return browserify({ entries: ['./tmp/allConcat.js'] })
+  return browserify({ entries: ['tmp/allConcat.js'] })
     .bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task("minifyScripts", ["jsBrowserify"], function(){
-  return gulp.src("./build/js/app.js")
+  return gulp.src("build/js/app.js")
     .pipe(uglify())
-    .pipe(gulp.dest("./build/js"));
+    .pipe(gulp.dest("build/js"));
 });
 
 //run $ gulp bowerJS every time we add a new JavaScript front-end dependency
@@ -48,7 +48,7 @@ gulp.task('bowerJS', function () {
   return gulp.src(lib.ext('js').files)
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('build/js'));
 });
 
 //run $ gulp bower any time we add a bower dependency
@@ -80,7 +80,7 @@ gulp.task('jshint', function(){
 gulp.task('serve', ['build'], function() {
   browserSync.init({
     server: {
-      baseDir: "./",
+      baseDir: "",
       index: "index.html"
     }
   });
@@ -114,6 +114,6 @@ gulp.task('cssBuild', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
