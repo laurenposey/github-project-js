@@ -7,8 +7,8 @@ var utilities = require('gulp-util');
 var buildProduction = utilities.env.production;
 var del = require('del');
 var jshint = require('gulp-jshint');
-var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-sass');
 // var lib    = require('bower-files')(); // use where no Bootstrap
 var lib = require('bower-files')({ // must use with Bootstrap
   "overrides":{
@@ -22,15 +22,6 @@ var lib = require('bower-files')({ // must use with Bootstrap
   }
 });
 var browserSync = require('browser-sync').create();
-
-gulp.task('cssBuild', function() {
-  return gulp.src(['scss/*.scss'])
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'))
-    .pipe(browserSync.stream());
-});
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
@@ -60,14 +51,8 @@ gulp.task('bowerJS', function () {
     .pipe(gulp.dest('./build/js'));
 });
 
-gulp.task('bowerCSS', function () {
-  return gulp.src(lib.ext('css').files)
-    .pipe(concat('vendor.css'))
-    .pipe(gulp.dest('./build/css'));
-});
-
 //run $ gulp bower any time we add a bower dependency
-gulp.task('bower', ['bowerJS', 'bowerCSS']);
+gulp.task('bower', ['bowerJS']);
 
 gulp.task("clean", function(){
   return del(['build', 'tmp']);
@@ -81,6 +66,7 @@ gulp.task('build', ['clean'], function(){
   }
   gulp.start('bower');
   gulp.start('cssBuild');
+
 });
 
 //to run: $ gulp jshint
@@ -105,7 +91,7 @@ gulp.task('serve', ['build'], function() {
   gulp.watch(["scss/*.scss"], ['cssBuild']);
 });
 
-//All of the following tasks run automatically when server is running
+//All of the gfollowing tasks run automatically when server is running
 
 // to run this: $ gulp jsBuild
 gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
@@ -120,4 +106,14 @@ gulp.task('bowerBuild', ['bower'], function(){
 // to run this: $ gulp htmlBuild
 gulp.task('htmlBuild', function() {
   browserSync.reload();
+});
+
+
+gulp.task('cssBuild', function() {
+  return gulp.src(['scss/*.scss'])
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream());
 });

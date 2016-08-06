@@ -4,9 +4,10 @@ function Git() {
 
 }
 
-Git.prototype.exports.getRepos = function(gitUser){
-  $.get('https://api.github.com/users/' + gitUser + apiKey).then(function(response){
-    $("#output").prepend(response);
+Git.prototype.getRepos = function(gitUser){
+  $.get('https://api.github.com/users/' + gitUser + '/repos').then(function(response){
+    console.log(response)
+    // $("#output").html(response);
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
