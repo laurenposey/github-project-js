@@ -7,6 +7,5 @@ $(document).ready(function() {
     event.preventDefault();
     var gitUser = $('#git-user-input').val();
     gitApiObject.getRepos(gitUser);
-
   });
 });
