@@ -45,9 +45,8 @@ $ gulp serve
 _apiKey: 94a3eaabf868c9dfb9ce74ae332306d883fc450a_
 
 ## Known Bugs
-_PROJECT INCOMPLETE_
-_Objectives that still need to be met:_
-* _Website works as expected_
+
+_none_
 
 
 ## Support and contact details
